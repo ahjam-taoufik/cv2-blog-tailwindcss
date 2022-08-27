@@ -27,8 +27,8 @@
         <div class="ml-4">
           <img src="../images/easyshop.png" alt="" />
         </div>
-        <div class="ml-12 flex space-x-9">
-          <div class="text-slate-700 hover:text-blue-700 cursor-pointer">
+        <div class="ml-12 lg:flex space-x-9 hidden">
+          <div class="text-slate-700 block hover:text-blue-700 cursor-pointer">
             <i class="fas fa-home"></i>
             <span>Home</span>
           </div>
@@ -41,24 +41,33 @@
             <span>Contact</span>
           </div>
         </div>
-        <div class="ml-auto mr-8 relative flex items-center space-x-4">
-          <i class="fas fa-search absolute top-3 left-7 text-gray-400"></i>
-          <input
-            type="text"
-            class="h-9 w-56 rounded-full pl-10 focus:outline-none bg-slate-100"
-            placeholder="Search..."
-          />
+
+        <div class="ml-auto mr-8 flex items-center space-x-4">
+          <div class="relative lg:block hidden">
+            <i class="fas fa-search absolute top-3 left-3 text-gray-400"></i>
+            <input
+              type="text"
+              class="h-9 w-56 rounded-full pl-10 focus:outline-none bg-slate-100"
+              placeholder="Search..."
+            />
+          </div>
+
           <div class="text-slate-700 hover:text-blue-700 cursor-pointer">
             <i class="far fa-user"></i>
             <span class="ml-1">Register/Login</span>
           </div>
+          <div class="lg:hidden">
+            <i class="fas fa-bars" id="open_drawer"></i>
+          </div>
         </div>
       </nav>
       <!-- Body -->
-      <div class="w-full h-full mt-10 flex space-x-4 px-6">
+      <div
+        class="w-full h-full mt-10 flex flex-col lg:space-x-4 pl-6 pr-6 lg:flex-row"
+      >
         <!-- Left -->
-        <div class="w-3/12 h-full">
-          <div class="w-full p-4 bg-white rounded-md">
+        <div class="lg:w-3/12 lg:order-first h-full">
+          <div class="hidden lg:block w-full p-4 bg-white rounded-md">
             <p class="mb-2">Categories</p>
             <ul>
               <li class="w-full flex justify-between">
@@ -105,51 +114,10 @@
               </li>
             </ul>
           </div>
-          <div class="w-full p-4 mt-4 bg-white rounded-md">
-            <p class="mb-2">Random Posts</p>
+
+          <div class="w-full p-4 bg-white rounded-md">
+            <p class="mb-2">Left Random Posts</p>
             <ul>
-              <li class="w-full flex space-x-4 mb-4">
-                <img
-                  class="w-20 h-20 rounded-md object-cover hover:brightness-200"
-                  src="../images/pic1.png"
-                  alt=""
-                />
-                <div>
-                  <p class="font-bold">
-                    Team Bitbose geared up to attend Blockchain
-                  </p>
-                  <i class="far fa-clock mr-1 opacity-70"></i>
-                  <span class="opacity-70">Jun 2022</span>
-                </div>
-              </li>
-              <li class="w-full flex space-x-4 mb-4">
-                <img
-                  class="w-20 h-20 rounded-md"
-                  src="../images/pic1.png"
-                  alt=""
-                />
-                <div>
-                  <p class="font-bold">
-                    Team Bitbose geared up to attend Blockchain
-                  </p>
-                  <i class="far fa-clock mr-1 opacity-70"></i>
-                  <span class="opacity-70">Jun 2022</span>
-                </div>
-              </li>
-              <li class="w-full flex space-x-4 mb-4">
-                <img
-                  class="w-20 h-20 rounded-md"
-                  src="../images/pic1.png"
-                  alt=""
-                />
-                <div>
-                  <p class="font-bold">
-                    Team Bitbose geared up to attend Blockchain
-                  </p>
-                  <i class="far fa-clock mr-1 opacity-70"></i>
-                  <span class="opacity-70">Jun 2022</span>
-                </div>
-              </li>
               <li class="w-full flex space-x-4 mb-4">
                 <img
                   class="w-20 h-20 rounded-md"
@@ -169,7 +137,7 @@
         </div>
 
         <!-- Main -->
-        <div class="w-6/12 h-full rounded-md">
+        <div class="lg:w-6/12 order-first h-full rounded-md">
           <div class="bg-white w-full">
             <div class="flex justify-between pt-5 mb-9 px-4">
               <h1 class="font-bold text-2xl">Business</h1>
@@ -263,8 +231,8 @@
         </div>
 
         <!-- Right -->
-        <div class="w-3/12 h-full">
-          <div class="w-full p-4 mb-4 bg-white rounded-md">
+        <div class="lg:w-3/12 block w-full h-full">
+          <div class="w-full p-4 mb-4 mt-2 lg:mt-0 bg-white rounded-md">
             <p class="mb-2 font-bold text-xl">Sosial Plugins</p>
             <div class="space-x-2">
               <i
@@ -357,5 +325,41 @@
         </div>
       </div>
     </div>
+
+    <!-- drawer -->
+    <div
+      id="drawer_close"
+      class="fixed w-full h-full bg-black top-0 left-0 invisible bg-opacity-50"
+    >
+      <div
+        id="drawer"
+        class="fixed w-72 p-4 h-full transition-all duration-500 bg-white -left-72 top-1"
+      >
+        <div>salamjkjkjk</div>
+        <div>salamjkjkjk</div>
+        <div>salamjkjkjk</div>
+      </div>
+    </div>
+
+    <div class="h-12 text-center opacity-70">
+      Copyright &copy; 2022 Created By Taoufik ahjam
+    </div>
+    <script>
+      document
+        .querySelector('#open_drawer')
+        .addEventListener('click', function () {
+          document.querySelector('#drawer').classList.remove('-left-72');
+          document.querySelector('#drawer').classList.add('left-0');
+          document.querySelector('#drawer_close').classList.remove('invisible');
+        });
+
+      document
+        .querySelector('#drawer_close')
+        .addEventListener('click', function () {
+          document.querySelector('#drawer').classList.add('-left-72');
+          document.querySelector('#drawer').classList.remove('left-0');
+          document.querySelector('#drawer_close').classList.add('invisible');
+        });
+    </script>
   </body>
 </html>
