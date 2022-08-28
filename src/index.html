@@ -21,6 +21,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Header -->
     <header class="h-16 w-full shadow-md bg-pink-100 sm:bg-white">
       <div class="container flex items-center justify-between">
         <a href="#">
@@ -58,7 +59,7 @@
             <div>
               <i class="far fa-heart fa-lg"></i>
             </div>
-            <div class="text-sm">Wish List</div>
+            <div class="text-sm hidden sm:block">Wish List</div>
           </a>
           <a
             href="#"
@@ -71,7 +72,7 @@
             <div>
               <i class="fas fa-shopping-bag fa-xl"></i>
             </div>
-            <div class="text-sm">Cart</div>
+            <div class="text-sm hidden sm:block">Cart</div>
           </a>
           <a
             href="#"
@@ -80,11 +81,197 @@
             <div>
               <i class="fas fa-user fa-xl"></i>
             </div>
-            <div class="text-sm">Account</div>
+            <div class="text-sm hidden sm:block">Account</div>
           </a>
         </div>
         <!-- End icons -->
       </div>
     </header>
+    <!--  end Header -->
+    <!-- Menu -->
+    <div class="bg-gray-800 hidden md:block">
+      <div class="container flex items-center">
+        <!-- Categories -->
+        <div class="bg-primary px-6 py-4 cursor-pointer group relative">
+          <i class="fas fa-bars text-white"></i>
+          <span class="text-white pl-2 capitalize">all categories</span>
+
+          <div
+            class="absolute top-full w-full left-0 bg-white shadow-md py-3 invisible group-hover:opacity-100 group-hover:visible z-50 divide-y divide-gray-300 divide-dashed"
+          >
+            <!-- ---- Start single category ----- -->
+            <a
+              href="#"
+              class="px-6 py-3 flex items-center hover:bg-gray-100 transition"
+            >
+              <img src="/images/icons/bed.svg" class="w-5 h-5 object-contain" />
+              <span class="ml-6 text-gray-700 text-sm font-semibold">
+                BedRoom</span
+              >
+            </a>
+            <!-- ---- single category End ----- -->
+
+            <!-- ---- Start single category ----- -->
+            <a
+              href="#"
+              class="px-6 py-3 flex items-center hover:bg-gray-100 transition"
+            >
+              <img
+                src="/images/icons/sofa.svg"
+                class="w-5 h-5 object-contain"
+              />
+              <span class="ml-6 text-gray-700 text-sm font-semibold">
+                Sofa</span
+              >
+            </a>
+            <!-- ---- single category End ----- -->
+
+            <!-- ---- Start single category ----- -->
+            <a
+              href="#"
+              class="px-6 py-3 flex items-center hover:bg-gray-100 transition"
+            >
+              <img
+                src="/images/icons/office.svg"
+                class="w-5 h-5 object-contain"
+              />
+              <span class="ml-6 text-gray-700 text-sm font-semibold">
+                Office</span
+              >
+            </a>
+            <!-- ---- single category End ----- -->
+
+            <!-- ---- Start single category ----- -->
+            <a
+              href="#"
+              class="px-6 py-3 flex items-center hover:bg-gray-100 transition"
+            >
+              <img
+                src="/images/icons/outdoor-cafe.svg"
+                class="w-5 h-5 object-contain"
+              />
+              <span class="ml-6 text-gray-700 text-sm font-semibold">
+                OutDoor</span
+              >
+            </a>
+            <!-- ---- single category End ----- -->
+
+            <!-- ---- Start single category ----- -->
+            <a
+              href="#"
+              class="px-6 py-3 flex items-center hover:bg-gray-100 transition"
+            >
+              <img
+                src="/images/icons/terrace.svg"
+                class="w-5 h-5 object-contain"
+              />
+              <span class="ml-6 text-gray-700 text-sm font-semibold">
+                Mattress</span
+              >
+            </a>
+            <!-- ---- single category End ----- -->
+
+            <!-- ---- Start single category ----- -->
+            <a
+              href="#"
+              class="px-6 py-3 flex items-center hover:bg-gray-100 transition"
+            >
+              <img
+                src="/images/icons/sofa.svg"
+                class="w-5 h-5 object-contain"
+              />
+              <span class="ml-6 text-gray-700 text-sm font-semibold">
+                Sofa</span
+              >
+            </a>
+            <!-- ---- single category End ----- -->
+          </div>
+        </div>
+        <!--End Categories -->
+
+        <div class="flex items-center justify-between flex-grow">
+          <div class="pl-10">
+            <a href="#" class="text-white font-semibold pl-4">Home</a>
+            <a href="#" class="text-white font-semibold pl-4">Shop</a>
+            <a href="#" class="text-white font-semibold pl-4">About Us</a>
+            <a href="#" class="text-white font-semibold pl-4">Contact Us</a>
+          </div>
+          <div>
+            <a href="#" class="text-white font-semibold pl-4">Login/Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Menu -->
+
+    <!-- Banner -->
+    <div
+      class="bg-cover bg-[url('../images/banner-bg.jpg')] py-36 bg-no-repeat bg-center"
+    >
+      <div class="container">
+        <h1 class="text-4xl font-bold">
+          Best Collection For<br class="block lg:hidden" />
+          Home Decoration
+        </h1>
+        <h1 class="text-xl">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          <br />Libero, natus.
+        </h1>
+
+        <div class="mt-10">
+          <a
+            href="#"
+            class="bg-primary py-3 px-6 border-2 border-primary rounded-md text-white font-semibold transition duration-600 hover:text-primary hover:bg-transparent"
+            >Show More</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--End Banner -->
+    <div
+      class="p-10 flex items-center flex-col md:flex-row md:justify-center md:space-x-4"
+    >
+      <div
+        class="group flex mb-2 space-x-3 pt-4 pb-4 pl-6 pr-6 border w-full md:w-60 hover:bg-gray-400 transition duration-500 cursor-pointer border-primary"
+      >
+        <img src="../images/icons/delivery-van.svg" alt="" />
+        <div class="flex flex-col">
+          <span class="font-bold group-hover:text-white"> Free Shipping</span>
+          <span
+            class="text-xs opacity-70 group-hover:text-white group-hover:opacity-100"
+          >
+            Order over $200</span
+          >
+        </div>
+      </div>
+      <div
+        class="group flex mb-2 space-x-3 pt-4 pb-4 pl-6 pr-6 border w-full md:w-60 hover:bg-gray-400 transition duration-500 cursor-pointer border-primary"
+      >
+        <img src="../images/icons/delivery-van.svg" alt="" />
+        <div class="flex flex-col">
+          <span class="font-bold group-hover:text-white"> Free Shipping</span>
+          <span
+            class="text-xs opacity-70 group-hover:text-white group-hover:opacity-100"
+          >
+            Order over $200</span
+          >
+        </div>
+      </div>
+      <div
+        class="group flex mb-2 space-x-3 pt-4 pb-4 pl-6 pr-6 border w-full md:w-60 hover:bg-gray-400 transition duration-500 cursor-pointer border-primary"
+      >
+        <img src="../images/icons/delivery-van.svg" alt="" />
+        <div class="flex flex-col">
+          <span class="font-bold group-hover:text-white"> Free Shipping</span>
+          <span
+            class="text-xs opacity-70 group-hover:text-white group-hover:opacity-100"
+          >
+            Order over $200</span
+          >
+        </div>
+      </div>
+    </div>
+    <!--End Banner -->
   </body>
 </html>
