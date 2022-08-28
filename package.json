@@ -2,16 +2,14 @@
   "name": "03-blog-tailwindcss",
   "version": "1.0.0",
   "description": "",
-  "source": "src/index.html",
+  "main": "index.js",
   "scripts": {
-    "dev": "parcel"
+    "build": "tailwindcss -i ./src/index.css -o ./output/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.7.0",
-    "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
   }
 }
