@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .back {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url('../images/background-off.jpg');
+    color: transparent;
+  }
+  .egg {
+    display: block;
+    width: 126px;
+    /* width has to be 70% of height */
+    /* could use width:70%; in a square container */
+    height: 160px;
+    background-color: white;
+
+    /* beware that Safari needs actual
+ px for border radius (bug) */
+    /* -webkit-border-radius: 63px 63px 63px 63px/ 108px 108px 72px 72px; */
+    /* fails in Safari, but overwrites in Chrome */
+    border-radius: 0% 63% 22% 0% / 0% 57% 43% 0%;
+  }
+}
