@@ -142,6 +142,48 @@
   </div>
   <!-- End Menu -->
 
+
+  <!-- Mobile Menu -->
+  <div
+    class="z-50 md:hidden border-t-4  border-gray-300 py-1 flex justify-around bg-gray-100 w-full fixed bottom-0 left-0 ">
+    <a href="#" id="bar_Menu"
+      class="hover:bg-gray-300 flex group flex-col text-center p-1 rounded-md transition duration-300">
+      <i class="fa fa-bars text-xl group-hover:text-primary"></i>
+      <span class="font-semibold"> Menu</span>
+    </a>
+
+    <a href="#" class="hover:bg-gray-300 group flex flex-col text-center p-1 rounded-md transition duration-300">
+      <i class="fa fa-list-ul text-xl group-hover:text-primary"></i>
+      <span class="font-semibold"> Categories</span>
+    </a>
+    <a href="#" class="hover:bg-gray-300 group flex flex-col text-center p-1 rounded-md transition duration-300">
+      <i class="fa fa-search text-xl group-hover:text-primary"></i>
+      <span class="font-semibold"> Search</span>
+    </a>
+
+    <a href="#"
+      class="hover:bg-gray-300 realtive group px-3 flex flex-col text-center p-1 rounded-md transition duration-300">
+      <i class="fa fa-cart-shopping text-xl group-hover:text-primary"></i>
+      <span class="font-semibold group-hover:text-primary"> Cart</span>
+      <span class="bg-primary absolute right-10  top-0 rounded-2xl w-7 h-7
+       text-white font-semibold">8</span>
+    </a>
+  </div>
+  <!--End  Mobile Menu -->
+
+  <!-- drawer -->
+  <div id="left_drawer_background" class="hidden md:hidden  fixed inset-0 z-50 bg-black bg-opacity-60">
+    <div id="left_drawer_core" class="absolute top-0 left-0  bg-white w-80 h-full">
+      <div id="left_drawer_close" class="absolute top-4 right-4 cursor-pointer ">
+        <i class="fa fa-times "></i>
+      </div>
+    </div>
+  </div>
+
+  <!--End drawer -->
+
+
+
   <!-- Banner -->
   <div class="bg-cover bg-[url('../images/banner-bg.jpg')] py-36 bg-no-repeat bg-center">
     <div class="container">
@@ -196,11 +238,11 @@
   <!-- End Features -->
 
   <!-- Categories -->
-  <div class="container py-10 px-8">
+  <div class="container  py-10 px-8">
     <h1 class="text-3xl font-semibold uppercase my-4 opacity-60">
       shop By Categories
     </h1>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 ">
       <div class="relative group overflow-hidden">
         <img src="../images/category/category-1.jpg" alt="" class="group-hover:scale-125 transition duration-500" />
         <a href="#"
@@ -521,9 +563,6 @@
         </div>
       </div>
       <!--End Arrival Card  -->
-
-
-
     </div>
   </div>
   <!--End Arrival -->
@@ -550,7 +589,33 @@
     </div>
     <img src="../images/banner-bg.jpg" class="" alt="">
   </div>
-  <span>salam</span>
+
+
+
+
+
+
+
+  <script>
+    const bar_Menu = document.querySelector('#bar_Menu');
+    const left_drawer_background = document.querySelector('#left_drawer_background');
+    const left_drawer_core = document.querySelector('#left_drawer_core');
+    const left_drawer_close = document.querySelector('#left_drawer_close');
+
+    bar_Menu.addEventListener('click', function () {
+      left_drawer_background.classList.remove("hidden")
+    })
+    left_drawer_close.addEventListener('click', function () {
+      left_drawer_background.classList.add("hidden")
+    })
+    left_drawer_background.addEventListener('click', function () {
+      left_drawer_background.classList.add("hidden")
+    })
+
+
+
+  </script>
+
 </body>
 
 </html>
